@@ -43,9 +43,9 @@
 
 	<body>
 		<div
-			class="kira-background"
-			style="background-image: url('<%= theme.background.path %>')"
-		></div>
+		class="kira-background"
+		style="background-image: url('<%- url_for(theme.background.path) %>')"
+	></div>
 		<%- include("components/header") %>
 		<div class="kira-body">
 			<%- include("components/sidebar") %>

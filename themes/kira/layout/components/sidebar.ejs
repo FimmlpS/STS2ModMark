@@ -1,11 +1,10 @@
 <div class="kira-sidebar" id="sidebar">
 	<div class="kira-avatar mdui-ripple">
-		<a href="<%= theme.avatar %>" title="<%= config.author || config.title %>">
-			<img
-				src="<%= theme.avatar %>"
-				alt="<%= config.author || config.title %>"
-			/>
-		</a>
+		<a href="<%- url_for('/') %>" title="<%= config.author || config.title %>">
+        <img
+		src="<%- url_for(theme.avatar) %>">
+		alt="<%= config.author || config.title %>">
+	</a>
 	</div>
 	<div class="kira-count">
 		<div><span>文章</span><%= site.posts.length %></div>
