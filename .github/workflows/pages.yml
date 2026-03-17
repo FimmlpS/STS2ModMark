@@ -3,7 +3,7 @@ name: Deploy GitHub Pages
 on:
   push:
     branches:
-      - master  # 或者你的主分支名
+      - main  # 你的主分支名
   workflow_dispatch:
 
 jobs:
