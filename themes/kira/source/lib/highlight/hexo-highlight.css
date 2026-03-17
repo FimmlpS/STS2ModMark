@@ -1,0 +1,95 @@
+figure.highlight {
+  padding: 0 0.5em;
+  background: #282c34;
+  margin: 25px 0;
+  border-radius: 13px;
+  overflow: auto;
+}
+
+figure.highlight pre,
+figure.highlight code {
+  font-family: 'JetBrains Mono', 'Fira Code', 'Source Code Pro', 'Microsoft YaHei', 'PingFang SC', Consolas, Monaco, 'Courier New', monospace;
+}
+
+figure.highlight .code pre {
+  color: #e0e0e0;
+  background: transparent;
+}
+
+figure.highlight .gutter {
+  border-right: 1px solid #35393b;
+}
+
+figure.highlight .line {
+  color: #e0e0e0;
+}
+
+.comment,
+.quote {
+  color: #7f848e !important;
+  font-style: italic;
+}
+
+.doctag,
+.formula,
+.keyword {
+  color: #c678dd !important;
+}
+
+.deletion,
+.name,
+.section,
+.selector-tag,
+.subst {
+  color: #e06c75 !important;
+}
+
+.literal {
+  color: #56b6c2 !important;
+}
+
+.addition,
+.attribute,
+.meta .string,
+.regexp,
+.string {
+  color: #98c379 !important;
+}
+
+.attr,
+.number,
+.selector-attr,
+.selector-class,
+.selector-pseudo,
+.template-variable,
+.type,
+.variable {
+  color: #d19a66 !important;
+}
+
+.bullet,
+.link,
+.meta,
+.selector-id,
+.symbol,
+.title {
+  color: #61aeee !important;
+}
+
+.built_in,
+.class .title,
+.title.class_ {
+  color: #e6c07b !important;
+}
+
+.emphasis {
+  font-style: italic;
+}
+
+.strong {
+  font-weight: 700;
+}
+
+.link {
+  text-decoration: underline;
+}

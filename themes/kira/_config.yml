@@ -11,6 +11,9 @@ menu:
   特效: 
     - /effects/
 
+# Code Block
+copyableCodeblock: true
+
 # Sidebar
 sidebar:
   position: left
