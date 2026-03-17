@@ -1,0 +1,32 @@
+# Kira Theme Config
+
+# Header
+menu:
+  首页: /
+  卡牌: /cards/
+  遗物: /relics/
+  特效: /effects/
+
+# Sidebar
+sidebar:
+  position: left
+  display: true
+  avatar: /images/avatar.png
+  welcome: 欢迎来到 STS2ModMark
+  social:
+    github: https://github.com/FimmlpS
+
+# Footer
+footer:
+  copyright: © 2026 STS2ModMark
+  powered: Powered by Hexo & Kira
+
+# Miscellaneous
+favicon: /favicon.ico
+rss: /atom.xml
+
+# Custom CSS
+custom_css:
+
+# Custom JavaScript
+custom_js:
