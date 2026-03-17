@@ -68,7 +68,7 @@
     </a>
     <a href="/STS2ModMark/" title="STS2ModMark">
         <img
-		src="/STS2ModMark/">
+		src="/STS2ModMark/images/avatar.jpg"
 		alt="FimmlpS"
 	/>
     </a>
@@ -78,8 +78,9 @@
 	<div class="kira-avatar mdui-ripple">
 		<a href="/STS2ModMark/" title="FimmlpS">
         <img
-		src="/STS2ModMark/">
-		alt="FimmlpS">
+		src="/STS2ModMark/images/avatar.jpg"
+		alt="FimmlpS"
+	>
 	</a>
 	</div>
 	<div class="kira-count">
@@ -188,7 +189,6 @@
 		<a href="https://github.com/ch1ny/kira-hexo/" target="_blank">Kira-Hexo</a>
 		<br />
 		
-		[object Object]
 	</div>
 </div>
 <div
@@ -248,6 +248,263 @@
     </div>
 </div>
 
+<div class="kira-toc-float">
+  <div class="kira-toc-header">
+    <h3 class="kira-toc-title">文章目录</h3>
+    <button class="kira-toc-toggle mdui-ripple" title="收起/展开目录">
+      <i class="kirafont icon-angle-left"></i>
+    </button>
+  </div>
+  <div class="kira-toc-content">
+    <ol class="toc" id="toc-list"></ol>
+  </div>
+</div>
+<script>
+  // 生成文章目录
+  document.addEventListener('DOMContentLoaded', function() {
+    // 只选择文章内容中的标题，排除侧边栏和其他区域的标题
+    const article = document.querySelector('article');
+    const headings = article ? article.querySelectorAll('h1, h2, h3, h4, h5, h6') : [];
+    const tocList = document.getElementById('toc-list');
+    const tocFloat = document.querySelector('.kira-toc-float');
+    const tocToggle = document.querySelector('.kira-toc-toggle');
+    const tocHeader = document.querySelector('.kira-toc-header');
+    const tocTitle = document.querySelector('.kira-toc-title');
+    const tocContent = document.querySelector('.kira-toc-content');
+    
+    // 初始化目录状态
+    let tocExpanded = true;
+    
+    // 切换目录展开/收起状态
+    tocToggle.addEventListener('click', function() {
+      tocExpanded = !tocExpanded;
+      if (tocExpanded) {
+        // 展开目录
+        tocFloat.style.width = '280px';
+        tocFloat.style.height = '';
+        tocHeader.style.display = 'flex';
+        tocHeader.style.padding = '16px';
+        tocHeader.style.justifyContent = 'space-between';
+        tocTitle.style.display = 'block';
+        tocContent.style.display = 'block';
+        tocToggle.style.borderRadius = '4px';
+        tocToggle.style.width = '';
+        tocToggle.style.height = '';
+        tocToggle.style.position = 'static';
+        tocToggle.style.top = '';
+        tocToggle.style.right = '';
+        tocToggle.style.transform = 'none';
+        tocToggle.style.margin = '0';
+        tocToggle.querySelector('i').className = 'kirafont icon-angle-left';
+        tocToggle.title = '收起目录';
+      } else {
+        // 收起目录
+        tocFloat.style.width = '50px';
+        tocFloat.style.height = '50px';
+        tocHeader.style.display = 'flex';
+        tocHeader.style.padding = '5px';
+        tocHeader.style.justifyContent = 'center';
+        tocTitle.style.display = 'none';
+        tocContent.style.display = 'none';
+        tocToggle.style.borderRadius = '50%';
+        tocToggle.style.width = '40px';
+        tocToggle.style.height = '40px';
+        tocToggle.style.position = 'static';
+        tocToggle.style.top = '';
+        tocToggle.style.right = '';
+        tocToggle.style.transform = 'none';
+        tocToggle.style.margin = '0';
+        tocToggle.querySelector('i').className = 'kirafont icon-angle-right';
+        tocToggle.title = '展开目录';
+      }
+    });
+    
+    if (headings.length > 0) {
+      // 用于记录各层级的编号
+      const levelCounts = {2: 0, 3: 0, 4: 0, 5: 0, 6: 0};
+      // 用于记录当前的层级路径
+      const currentPath = [];
+      
+      headings.forEach(function(heading) {
+        // 跳过文章标题（h1）和其他不需要的标题
+        const level = parseInt(heading.tagName.substring(1));
+        const text = heading.textContent;
+        
+        // 确保标题有ID
+        const id = heading.querySelector('span') ? heading.querySelector('span').id : 'heading-' + Date.now() + Math.random().toString(36).substr(2, 9);
+        if (!heading.id) {
+          heading.id = id;
+        }
+        
+        // 只包含h2及以下级别的标题，跳过h1（通常是文章标题）
+        if (level >= 2) {
+          // 重置当前级别以下的所有级别计数
+          for (let i = level + 1; i <= 6; i++) {
+            levelCounts[i] = 0;
+          }
+          
+          // 增加当前级别的计数
+          levelCounts[level]++;
+          
+          // 更新当前路径
+          currentPath[level - 2] = levelCounts[level];
+          currentPath.splice(level - 1);
+          
+          // 生成层级编号
+          const number = currentPath.join('.');
+          
+          const li = document.createElement('li');
+          li.className = 'toc-item toc-level-' + level;
+          
+          const a = document.createElement('a');
+          a.className = 'toc-link';
+          a.href = '#' + id;
+          
+          const spanNumber = document.createElement('span');
+          spanNumber.className = 'toc-number';
+          spanNumber.textContent = number + ' ';
+          
+          const spanText = document.createElement('span');
+          spanText.className = 'toc-text';
+          spanText.textContent = text;
+          
+          a.appendChild(spanNumber);
+          a.appendChild(spanText);
+          li.appendChild(a);
+          
+          // 根据标题级别添加缩进
+          if (level > 2) {
+            const parentLevel = level - 1;
+            const parentItems = tocList.querySelectorAll('.toc-item.toc-level-' + parentLevel);
+            if (parentItems.length > 0) {
+              const lastParent = parentItems[parentItems.length - 1];
+              let childList = lastParent.querySelector('.toc-child');
+              if (!childList) {
+                childList = document.createElement('ol');
+                childList.className = 'toc-child';
+                lastParent.appendChild(childList);
+              }
+              childList.appendChild(li);
+            } else {
+              tocList.appendChild(li);
+            }
+          } else {
+            tocList.appendChild(li);
+          }
+        }
+      });
+    } else {
+      tocList.innerHTML = '<li>无目录</li>';
+    }
+  });
+</script>
+<style>
+  .kira-toc-float {
+    position: fixed;
+    right: 20px;
+    top: 100px;
+    width: 280px;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .kira-toc-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    border-bottom: 1px solid #f0f0f0;
+    transition: all 0.3s ease;
+  }
+  
+  .kira-toc-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+    color: #333;
+  }
+  
+  .kira-toc-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: #333;
+    padding: 8px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    transform: translateY(-50%);
+    z-index: 1000;
+  }
+  
+  .kira-toc-toggle:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #3498db;
+  }
+  
+  .kira-toc-toggle i {
+    margin: 0;
+    font-size: 16px;
+  }
+  
+  .kira-toc-content {
+    padding: 16px;
+    max-height: 70vh;
+    overflow-y: auto;
+    transition: all 0.3s ease;
+  }
+  
+  .kira-toc-content ol {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .kira-toc-content li {
+    margin-bottom: 8px;
+  }
+  
+  .kira-toc-content a {
+    color: #555;
+    text-decoration: none;
+    transition: color 0.3s;
+    display: block;
+  }
+  
+  .kira-toc-content a:hover {
+    color: #3498db;
+  }
+  
+  .kira-toc-content ol ol {
+    padding-left: 20px;
+    margin-top: 4px;
+  }
+  
+  .kira-toc-content .toc-number {
+    margin-right: 8px;
+    color: #999;
+  }
+  
+  /* 响应式设计 */
+  @media (max-width: 768px) {
+    .kira-toc-float {
+      position: static;
+      width: 100%;
+      margin-bottom: 24px;
+    }
+  }
+</style>
 <div class="kira-post">
 	<article>
 		
