@@ -2,19 +2,67 @@
 
 # Header
 menu:
-  首页: /
-  卡牌: /cards/
-  遗物: /relics/
-  特效: /effects/
+  首页: 
+    - /
+  卡牌: 
+    - /cards/
+  遗物: 
+    - /relics/
+  特效: 
+    - /effects/
 
 # Sidebar
 sidebar:
   position: left
   display: true
-  avatar: /images/avatar.png
+  avatar: /images/avatar.jpg
   welcome: 欢迎来到 STS2ModMark
   social:
     github: https://github.com/FimmlpS
+
+# Background
+background:
+  path: /images/background.jpg
+  width: 1920
+  height: 1080
+
+# Widgets
+widgets:
+  - category
+  - tagcloud
+  - archive
+  - social
+
+# Color
+color:
+  first:
+    r: 52
+    g: 152
+    b: 219
+  second:
+    r: 231
+    g: 76
+    b: 60
+  third:
+    r: 46
+    g: 204
+    b: 113
+  fourth:
+    r: 155
+    g: 89
+    b: 182
+  fifth:
+    r: 241
+    g: 196
+    b: 15
+  sixth:
+    r: 52
+    g: 73
+    b: 94
+  seventh:
+    r: 149
+    g: 165
+    b: 166
 
 # Footer
 footer:
@@ -30,3 +78,37 @@ custom_css:
 
 # Custom JavaScript
 custom_js:
+
+# Gitalk
+gitalk:
+  active: false
+  client_id: ''
+  client_secret: ''
+  repo: ''
+  owner: ''
+  admin: ['']
+  distraction_free_mode: false
+
+# Giscus
+giscus:
+  active: false
+  repo: ''
+  repo_id: ''
+  category: ''
+  category_id: ''
+  mapping: 'pathname'
+  strict: '0'
+  reactions_enabled: '1'
+  emit_metadata: '0'
+  input_position: 'bottom'
+  theme: 'light'
+  lang: 'zh-CN'
+  loading: 'lazy'
+
+# CDN
+cdn:
+  gitalk:
+    css: https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css
+    js: https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js
+  giscus:
+    js: https://giscus.app/client.js
