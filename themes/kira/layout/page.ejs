@@ -1,0 +1,42 @@
+<%- partial('components/kira-image') %>
+<% if (theme.copyableCodeblock) { %>
+	<%- css('css/kira-code-copy') %>
+	<%- js('js/kira-code-copy') %>
+<% } %>
+<%- partial('components/toc') %>
+<div class="kira-post">
+	<article>
+		<% if (page.cover){ %>
+		<div class="kira-post-cover">
+			<img
+				data-src="<%- url_for(page.cover) %>"
+				data-sizes="auto"
+				alt="<%= page.title %>"
+				class="lazyload kira-post-cover-image disabled-kira-image"
+			/>
+			<h1><%= page.title %></h1>
+		</div>
+		<% } else { %>
+		<div
+			class="kira-post-cover"
+			style="padding-bottom: '<%= theme.background.height/theme.background.width * 100 %>%'"
+		>
+			<img
+				data-src="<%- url_for(theme.background.path) %>"
+				data-sizes="auto"
+				alt="<%= page.title %>"
+				class="lazyload kira-post-cover-image disabled-kira-image"
+			/>
+			<h1><%= page.title %></h1>
+		</div>
+		<% } %>
+		<div class="kira-post-meta kira-rainbow" style="margin:10px 0!important;">
+			<a><i class="kirafont icon-calendar-fill"></i><%- date(page.date, "YYYY年MM月DD日") %></a>
+			<a><i class="kirafont icon-edit-fill"></i><%= wordcount(page.content) %> 字</a>
+			<a><i class="kirafont icon-time-circle-fill"></i>大概 <%= min2read(page.content, {cn: 250, en: 160}) %> 分钟</a>
+		</div>
+		<%- image_auto_lazyload(page.content) %>
+	</article>
+
+	<% if (!page.reprinted){ %> <%- partial('components/copyright') %> <% } %>
+</div>

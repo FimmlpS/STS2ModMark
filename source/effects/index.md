@@ -2,6 +2,7 @@
 title: 特效
 type: page
 layout: default
+cover: /images/background.jpg
 ---
 
 # 特效

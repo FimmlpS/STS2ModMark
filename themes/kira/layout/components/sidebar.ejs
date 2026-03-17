@@ -2,8 +2,9 @@
 	<div class="kira-avatar mdui-ripple">
 		<a href="<%- url_for('/') %>" title="<%= config.author || config.title %>">
         <img
-		src="<%- url_for(theme.avatar) %>">
-		alt="<%= config.author || config.title %>">
+		src="<%- url_for('/images/avatar.jpg') %>"
+		alt="<%= config.author || config.title %>"
+	>
 	</a>
 	</div>
 	<div class="kira-count">
@@ -51,7 +52,6 @@
 				<%= theme.beian %>
 			</a>
 		<% } %>
-		<%- theme.sidebar %>
 	</div>
 </div>
 <div

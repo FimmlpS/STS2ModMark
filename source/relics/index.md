@@ -2,6 +2,7 @@
 title: 遗物
 type: page
 layout: default
+cover: /images/background.jpg
 ---
 
 # 遗物
