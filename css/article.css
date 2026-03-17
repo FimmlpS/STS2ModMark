@@ -8,10 +8,20 @@ article p {
 article .highlight {
   padding: 0 0.5em;
   background: #282c34;
-  color: #abb2bf;
   margin: 25px 0;
   border-radius: 13px;
   overflow: auto;
+}
+article .highlight::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+article .highlight::-webkit-scrollbar-thumb {
+  background-color: #555;
+  border-radius: 4px;
+}
+article .highlight::-webkit-scrollbar-track {
+  background-color: #282c34;
 }
 article .highlight .gutter {
   border-right: 1px solid #35393b;
@@ -24,7 +34,6 @@ article pre {
   margin: 0;
   padding: 0 6px 0 0;
   position: relative;
-  background: #282c34;
   line-height: 1.3em;
 }
 article pre code {
@@ -33,6 +42,9 @@ article pre code {
   border-radius: 0;
   font-size: 100%;
   font-family: Consolas;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
 }
 article a {
   -webkit-transition: color 0.35s ease-out;
