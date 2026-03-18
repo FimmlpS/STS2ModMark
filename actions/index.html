@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html 
+	lang="zh-CN">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		
+<link rel="stylesheet" href="/STS2ModMark/lib/mdui/mdui.min.css">
+
+		
+<link rel="stylesheet" href="/STS2ModMark/lib/highlight/hexo-highlight.css">
+
+		
+<link rel="stylesheet" href="/STS2ModMark/css/layout.css">
+
+		
+		<title> 行为 -  STS2ModMark</title>
+		<!-- <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" /> -->
+		<!-- <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script> -->
+		
+<script src="/STS2ModMark/lib/mdui/mdui.min.js"></script>
+
+		<!-- lazyload -->
+		
+<script src="/STS2ModMark/lib/lazysizes.js"></script>
+
+		<!-- smooth-scrolling -->
+		
+<script src="/STS2ModMark/lib/smooth-scrolling.js"></script>
+
+		<!-- highlight -->
+		
+<script src="/STS2ModMark/lib/highlight/highlight.min.js"></script>
+
+		<!-- 预置 kiraicon -->
+		
+<link rel="stylesheet" href="/STS2ModMark/lib/iconfont/iconfont.css">
+
+		
+		<link
+			rel="shortcut icon"
+			href=""
+			type=""
+		/>
+		
+<link rel="stylesheet" href="/STS2ModMark/deps/css/APlayer.min.css">
+
+		
+		
+<script src="/STS2ModMark/deps/js/APlayer.min.js"></script>
+<script src="/STS2ModMark/deps/js/Meting.min.js"></script>
+
+	<meta name="generator" content="Hexo 8.1.1"></head>
+
+	<body>
+		<div
+		class="kira-background"
+		style="background-image: url('/STS2ModMark/images/background.jpg')"
+	></div>
+		<div class="kira-header">
+    <a
+        class="kira-drawer-button mdui-ripple"
+        title="导航栏"
+        onclick="document.querySelector('.kira-sidebar-modal').classList.add('show');document.querySelector('.kira-sidebar#sidebar').classList.add('show');"
+    >
+        <i class="kirafont icon-menu"></i>
+    </a>
+    <a href="/STS2ModMark/" title="STS2ModMark">
+        <img
+		src="/STS2ModMark/images/avatar.jpg"
+		alt="FimmlpS"
+	/>
+    </a>
+</div>
+		<div class="kira-body">
+			<div class="kira-sidebar" id="sidebar">
+	<div class="kira-avatar mdui-ripple">
+		<a href="/STS2ModMark/" title="FimmlpS">
+        <img
+		src="/STS2ModMark/images/avatar.jpg"
+		alt="FimmlpS"
+	>
+	</a>
+	</div>
+	<div class="kira-count">
+		<div><span>文章</span>1</div>
+		<div><span>标签</span>0</div>
+		<div><span>分类</span>0</div>
+	</div>
+	<div class="kira-list">
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/STS2ModMark/"
+			title="首页"
+		>
+			<i
+				class="kirafont
+					
+						icon-unordered-list
+					"
+			></i>
+			<div class="kira-list-item-content">
+				首页
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/STS2ModMark/cards/"
+			title="卡牌"
+		>
+			<i
+				class="kirafont
+					
+						icon-unordered-list
+					"
+			></i>
+			<div class="kira-list-item-content">
+				卡牌
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/STS2ModMark/relics/"
+			title="遗物"
+		>
+			<i
+				class="kirafont
+					
+						icon-unordered-list
+					"
+			></i>
+			<div class="kira-list-item-content">
+				遗物
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/STS2ModMark/triggers/"
+			title="时机"
+		>
+			<i
+				class="kirafont
+					
+						icon-unordered-list
+					"
+			></i>
+			<div class="kira-list-item-content">
+				时机
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple true"
+			href="/STS2ModMark/actions/"
+			title="行为"
+		>
+			<i
+				class="kirafont
+					
+						icon-unordered-list
+					"
+			></i>
+			<div class="kira-list-item-content">
+				行为
+			</div>
+		</a>
+		
+	</div>
+	<aside id="kira-sidebar">
+		
+			
+		
+			
+
+		
+			
+	<div class="kira-widget-wrap">
+		<h3 class="kira-widget-title">
+			文章归档
+		</h3>
+		<div class="kira-widget">
+			<ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/STS2ModMark/archives/2026/">2026</a><span class="archive-list-count">1</span></li></ul>
+		</div>
+	</div>
+
+
+		
+			<div class="kira-widget-wrap">
+	<div class="kira-widget kira-social">
+		
+	</div>
+</div>
+
+		
+	</aside>
+	<div class="kira-copyright">
+		&copy; 2026
+		<a href="/STS2ModMark/">FimmlpS</a>
+		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> &
+		<a href="https://github.com/ch1ny/kira-hexo/" target="_blank">Kira-Hexo</a>
+		<br />
+		
+	</div>
+</div>
+<div
+	class="kira-sidebar-modal"
+	id="sidebar-modal"
+	onclick="(function(self) {
+		self.classList.remove('show');
+		document.querySelector('.kira-sidebar.show#sidebar').classList.remove('show');
+	})(this)"
+></div>
+			<div class="kira-content">
+				<div id="kira-top-header"></div>
+				<div class="kira-main-content">
+					
+<link rel="stylesheet" href="/STS2ModMark/css/kira-image.css">
+
+
+<script src="/STS2ModMark/js/kira-image.js"></script>
+
+<div class="kira-image">
+    <div class="kira-image-modal">
+        <div class="kira-image-header">
+            <div class="kira-image-counter"></div>
+            <div class="kira-image-title"></div>
+            <div class="kira-image-operation">
+                <div class="kira-image-operation-button" id="kira-image-operation-button-zoom">
+                    <i class="kirafont icon-zoom-in"></i>
+                </div>
+                <div class="kira-image-operation-button" id="kira-image-operation-button-close">
+                    <i class="kirafont icon-close"></i>
+                </div>
+            </div>
+        </div>
+        <div class="kira-image-container">
+            <div class="kira-image-prev-button-panel">
+                <div class="kira-image-exchange-button">
+                    <i class="kirafont icon-left"></i>
+                </div>
+            </div>
+            <div class="kira-image-list">
+                <div class="kira-image-prev">
+                    <img />
+                </div>
+                <div class="kira-image-now">
+                    <img />
+                </div>
+                <div class="kira-image-next">
+                    <img />
+                </div>
+            </div>
+            <div class="kira-image-next-button-panel">
+                <div class="kira-image-exchange-button">
+                    <i class="kirafont icon-right"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+	
+<link rel="stylesheet" href="/STS2ModMark/css/kira-code-copy.css">
+
+	
+<script src="/STS2ModMark/js/kira-code-copy.js"></script>
+
+
+<div class="kira-toc-float">
+  <div class="kira-toc-header">
+    <h3 class="kira-toc-title">文章目录</h3>
+    <button class="kira-toc-toggle mdui-ripple" title="收起/展开目录">
+      <i class="kirafont icon-angle-left"></i>
+    </button>
+  </div>
+  <div class="kira-toc-content">
+    <ol class="toc" id="toc-list"></ol>
+  </div>
+</div>
+<script>
+  // 生成文章目录
+  document.addEventListener('DOMContentLoaded', function() {
+    // 只选择文章内容中的标题，排除侧边栏和其他区域的标题
+    const article = document.querySelector('article');
+    const headings = article ? article.querySelectorAll('h1, h2, h3, h4, h5, h6') : [];
+    const tocList = document.getElementById('toc-list');
+    const tocFloat = document.querySelector('.kira-toc-float');
+    const tocToggle = document.querySelector('.kira-toc-toggle');
+    const tocHeader = document.querySelector('.kira-toc-header');
+    const tocTitle = document.querySelector('.kira-toc-title');
+    const tocContent = document.querySelector('.kira-toc-content');
+    
+    // 初始化目录状态
+    let tocExpanded = true;
+    
+    // 切换目录展开/收起状态
+    tocToggle.addEventListener('click', function() {
+      tocExpanded = !tocExpanded;
+      if (tocExpanded) {
+        // 展开目录
+        tocFloat.style.width = '280px';
+        tocFloat.style.height = '';
+        tocHeader.style.display = 'flex';
+        tocHeader.style.padding = '16px';
+        tocHeader.style.justifyContent = 'space-between';
+        tocTitle.style.display = 'block';
+        tocContent.style.display = 'block';
+        tocToggle.style.borderRadius = '4px';
+        tocToggle.style.width = '';
+        tocToggle.style.height = '';
+        tocToggle.style.position = 'static';
+        tocToggle.style.top = '';
+        tocToggle.style.right = '';
+        tocToggle.style.transform = 'none';
+        tocToggle.style.margin = '0';
+        tocToggle.querySelector('i').className = 'kirafont icon-angle-left';
+        tocToggle.title = '收起目录';
+      } else {
+        // 收起目录
+        tocFloat.style.width = '50px';
+        tocFloat.style.height = '50px';
+        tocHeader.style.display = 'flex';
+        tocHeader.style.padding = '5px';
+        tocHeader.style.justifyContent = 'center';
+        tocTitle.style.display = 'none';
+        tocContent.style.display = 'none';
+        tocToggle.style.borderRadius = '50%';
+        tocToggle.style.width = '40px';
+        tocToggle.style.height = '40px';
+        tocToggle.style.position = 'static';
+        tocToggle.style.top = '';
+        tocToggle.style.right = '';
+        tocToggle.style.transform = 'none';
+        tocToggle.style.margin = '0';
+        tocToggle.querySelector('i').className = 'kirafont icon-angle-right';
+        tocToggle.title = '展开目录';
+      }
+    });
+    
+    if (headings.length > 0) {
+      // 用于记录各层级的编号
+      const levelCounts = {2: 0, 3: 0, 4: 0, 5: 0, 6: 0};
+      // 用于记录当前的层级路径
+      const currentPath = [];
+      
+      headings.forEach(function(heading) {
+        // 跳过文章标题（h1）和其他不需要的标题
+        const level = parseInt(heading.tagName.substring(1));
+        const text = heading.textContent;
+        
+        // 确保标题有ID
+        const id = heading.querySelector('span') ? heading.querySelector('span').id : 'heading-' + Date.now() + Math.random().toString(36).substr(2, 9);
+        if (!heading.id) {
+          heading.id = id;
+        }
+        
+        // 只包含h2及以下级别的标题，跳过h1（通常是文章标题）
+        if (level >= 2) {
+          // 重置当前级别以下的所有级别计数
+          for (let i = level + 1; i <= 6; i++) {
+            levelCounts[i] = 0;
+          }
+          
+          // 增加当前级别的计数
+          levelCounts[level]++;
+          
+          // 更新当前路径
+          currentPath[level - 2] = levelCounts[level];
+          currentPath.splice(level - 1);
+          
+          // 生成层级编号
+          const number = currentPath.join('.');
+          
+          const li = document.createElement('li');
+          li.className = 'toc-item toc-level-' + level;
+          
+          const a = document.createElement('a');
+          a.className = 'toc-link';
+          a.href = '#' + id;
+          
+          const spanNumber = document.createElement('span');
+          spanNumber.className = 'toc-number';
+          spanNumber.textContent = number + ' ';
+          
+          const spanText = document.createElement('span');
+          spanText.className = 'toc-text';
+          spanText.textContent = text;
+          
+          a.appendChild(spanNumber);
+          a.appendChild(spanText);
+          li.appendChild(a);
+          
+          // 根据标题级别添加缩进
+          if (level > 2) {
+            const parentLevel = level - 1;
+            const parentItems = tocList.querySelectorAll('.toc-item.toc-level-' + parentLevel);
+            if (parentItems.length > 0) {
+              const lastParent = parentItems[parentItems.length - 1];
+              let childList = lastParent.querySelector('.toc-child');
+              if (!childList) {
+                childList = document.createElement('ol');
+                childList.className = 'toc-child';
+                lastParent.appendChild(childList);
+              }
+              childList.appendChild(li);
+            } else {
+              tocList.appendChild(li);
+            }
+          } else {
+            tocList.appendChild(li);
+          }
+        }
+      });
+    } else {
+      tocList.innerHTML = '<li>无目录</li>';
+    }
+  });
+</script>
+<style>
+  .kira-toc-float {
+    position: fixed;
+    right: 20px;
+    top: 100px;
+    width: 280px;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .kira-toc-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    border-bottom: 1px solid #f0f0f0;
+    transition: all 0.3s ease;
+  }
+  
+  .kira-toc-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+    color: #333;
+  }
+  
+  .kira-toc-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: #333;
+    padding: 8px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    transform: translateY(-50%);
+    z-index: 1000;
+  }
+  
+  .kira-toc-toggle:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #3498db;
+  }
+  
+  .kira-toc-toggle i {
+    margin: 0;
+    font-size: 16px;
+  }
+  
+  .kira-toc-content {
+    padding: 16px;
+    max-height: 70vh;
+    overflow-y: auto;
+    transition: all 0.3s ease;
+  }
+  
+  .kira-toc-content ol {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .kira-toc-content li {
+    margin-bottom: 8px;
+  }
+  
+  .kira-toc-content a {
+    color: #555;
+    text-decoration: none;
+    transition: color 0.3s;
+    display: block;
+  }
+  
+  .kira-toc-content a:hover {
+    color: #3498db;
+  }
+  
+  .kira-toc-content ol ol {
+    padding-left: 20px;
+    margin-top: 4px;
+  }
+  
+  .kira-toc-content .toc-number {
+    margin-right: 8px;
+    color: #999;
+  }
+  
+  /* 响应式设计 */
+  @media (max-width: 768px) {
+    .kira-toc-float {
+      position: static;
+      width: 100%;
+      margin-bottom: 24px;
+    }
+  }
+</style>
+<div class="kira-post">
+	<article>
+		
+		<div class="kira-post-cover">
+			<img
+				data-src="/STS2ModMark/images/action/doors_of_light_and_dark.png"
+				data-sizes="auto"
+				alt="行为"
+				class="lazyload kira-post-cover-image disabled-kira-image"
+			/>
+			<h1>行为</h1>
+		</div>
+		
+		<div class="kira-post-meta kira-rainbow" style="margin:10px 0!important;">
+			<a><i class="kirafont icon-calendar-fill"></i>2026年03月18日</a>
+			<a><i class="kirafont icon-edit-fill"></i>2k 字</a>
+			<a><i class="kirafont icon-time-circle-fill"></i>大概 9 分钟</a>
+		</div>
+		<html><head></head><body><p>在塔一中，我们将它称作GameAction，不过塔二现在通过异步（async）和等待（await）实现，无需再自定义一系列GameAction。</p>
+<h2><span id="%E4%BC%A4%E5%AE%B3%E7%B1%BB">伤害类</span></h2><h3><span id="%E6%9E%84%E9%80%A0">构造</span></h3><p>常用于攻击牌，核心命令为DamageCmd</p>
+<figure class="highlight c#"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">override</span> <span class="keyword">async</span> Task <span class="title">OnPlay</span>(<span class="params">PlayerChoiceContext choiceContext, CardPlay cardPlay</span>)</span></span><br><span class="line">{</span><br><span class="line">    <span class="comment">//通过卡牌造成伤害</span></span><br><span class="line">    <span class="keyword">await</span> DamageCmd.Attack(DynamicVars.Damage.BaseValue)</span><br><span class="line">    .FromCard(<span class="keyword">this</span>)</span><br><span class="line">    .Targeting(cardPlay.Target)</span><br><span class="line">    .Execute(choiceContext);</span><br><span class="line">}</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+
+<p>PlayerChoiceContext是一个上下文类，用于存储一系列已发生的逻辑，无需深入理解（其实我也不懂）。<br>DamageCmd.Attack是固定返回AttackCommand的搭配，需要传入伤害值。<br>让我们看看AttackCommand的每一个方法和优先级：</p>
+<h3><span id="%E6%9D%A5%E6%BA%90">来源</span></h3><figure class="highlight c#"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//来源类型：卡牌</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> AttackCommand <span class="title">FromCard</span>(<span class="params">CardModel card</span>)</span>{...}</span><br><span class="line"></span><br><span class="line"><span class="comment">//来源类型：卡牌</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> AttackCommand <span class="title">FromOsty</span>(<span class="params">Creature osty, CardModel card</span>)</span>{...}</span><br><span class="line"></span><br><span class="line"><span class="comment">//来源类型：怪物</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> AttackCommand <span class="title">FromMonster</span>(<span class="params">MonsterModel monster</span>)</span>{...}</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+
+<h3><span id="%E7%9B%AE%E6%A0%87">目标</span></h3><figure class="highlight c#"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//目标类型：单体生物</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> AttackCommand <span class="title">Targeting</span>(<span class="params">Creature creature</span>)</span>{...}</span><br><span class="line"></span><br><span class="line"><span class="comment">//目标类型：所有敌对生物</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> AttackCommand <span class="title">TargetingAllOpponents</span>(<span class="params">CombatState combatState</span>)</span>{...}</span><br><span class="line"></span><br><span class="line"><span class="comment">//目标类型：随机敌对生物</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> AttackCommand <span class="title">TargetingRandomOpponents</span>(<span class="params">CombatState combatState, <span class="built_in">bool</span> allowDuplicates=<span class="literal">true</span></span>)</span>{...}</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+
+<h3><span id="%E6%8B%93%E5%B1%95%E9%9D%9E%E5%BF%85%E8%A6%81">拓展（非必要）</span></h3><h4><span id="%E5%9B%BA%E5%AE%9A%E6%95%B0%E5%80%BC">固定数值</span></h4><figure class="highlight c#"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//固定伤害值，添加该属性后将忽略所有Power的伤害修正</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> AttackCommand <span class="title">Unpowered</span>()</span>{...}</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+
+<details>
+<summary>（实际上这只是一个行为规范，以力量为例）</summary>
+
+<figure class="highlight c#"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//我们在自定义Power/Relic时要注意进行Unpowered判断，除非你写了（无视无视Power）的无视霸体行为</span></span><br><span class="line"><span class="comment">//StrengthPower</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">override</span> <span class="built_in">decimal</span> <span class="title">ModifyDamageAdditive</span>(<span class="params">Creature? target, <span class="built_in">decimal</span> amount, ValueProp props, Creature? dealer, CardModel? cardSource</span>)</span></span><br><span class="line">{</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">base</span>.Owner != dealer)</span><br><span class="line">    {</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>m;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">if</span> (!props.IsPoweredAttack())</span><br><span class="line">    {</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>m;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">base</span>.Amount;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">//ValueProp</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="built_in">bool</span> <span class="title">IsPoweredAttack</span>(<span class="params"><span class="keyword">this</span> ValueProp props</span>)</span></span><br><span class="line">{</span><br><span class="line">    <span class="keyword">if</span> (props.HasFlag(ValueProp.Move))</span><br><span class="line">    {</span><br><span class="line">        <span class="keyword">return</span> !props.HasFlag(ValueProp.Unpowered);</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">}</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+</details>
+
+<h4><span id="%E6%94%BB%E5%87%BB%E6%AC%A1%E6%95%B0">攻击次数</span></h4><figure class="highlight c#"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//设置攻击次数</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> AttackCommand <span class="title">WithHitCount</span>(<span class="params"><span class="built_in">int</span> hitCount</span>)</span>{...}</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+
+<h4><span id="%E5%8A%A8%E7%94%BB%E7%89%B9%E6%95%88%E8%AE%BE%E7%BD%AE">动画/特效设置</span></h4><figure class="highlight c#"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//设置攻击者动画（需注意的是默认动画为"Attack"且默认执行）</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> AttackCommand <span class="title">WithAttackerAnim</span>(<span class="params"><span class="built_in">string</span>? animName, <span class="built_in">float</span> delay, Creature? visualAttacker = <span class="literal">null</span></span>)</span>{...}</span><br><span class="line"></span><br><span class="line"><span class="comment">//设置无动画（需额外设置）</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> AttackCommand <span class="title">WithNoAttackerAnim</span>()</span>{...}</span><br><span class="line"></span><br><span class="line"><span class="comment">//设置攻击者特效/音效</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> AttackCommand <span class="title">WithAttackerFx</span>(<span class="params"><span class="built_in">string</span>? vfx = <span class="literal">null</span>, <span class="built_in">string</span>? sfx = <span class="literal">null</span>, <span class="built_in">string</span>? tmpSfx = <span class="literal">null</span></span>)</span>{...}</span><br><span class="line"></span><br><span class="line"><span class="comment">//设置等待时间（加速模式开启与否）</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> AttackCommand <span class="title">WithWaitBeforeHit</span>(<span class="params"><span class="built_in">float</span> fastSeconds, <span class="built_in">float</span> standardSeconds</span>)</span>{...}</span><br><span class="line"></span><br><span class="line"><span class="comment">//设置命中特效/音效</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> AttackCommand <span class="title">WithHitFx</span>(<span class="params"><span class="built_in">string</span>? vfx = <span class="literal">null</span>, <span class="built_in">string</span>? sfx = <span class="literal">null</span>, <span class="built_in">string</span>? tmpSfx = <span class="literal">null</span></span>)</span>{...}</span><br><span class="line"></span><br><span class="line"><span class="comment">//设置每个目标都生成命中特效</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> AttackCommand <span class="title">SpawningHitVfxOnEachCreature</span>()</span>{...}</span><br><span class="line"></span><br><span class="line"><span class="comment">//设置命中特效生成在目标中央位置</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> AttackCommand <span class="title">WithHitVfxSpawnedAtBase</span>()</span>{...}</span><br><span class="line"></span><br><span class="line"><span class="comment">//设置仅播放一次攻击动画</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> AttackCommand <span class="title">OnlyPlayAnimOnce</span>()</span>{...}</span><br><span class="line"></span><br><span class="line"><span class="comment">//还有一些就不列举了（</span></span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+
+<h4><span id="%E5%85%B3%E8%81%94task">关联Task</span></h4><figure class="highlight c#"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//攻击者动画执行后的Task</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> AttackCommand <span class="title">AfterAttackerAnim</span>(<span class="params">Func&lt;Task&gt; afterAttackerAnim</span>)</span>{...}</span><br><span class="line"></span><br><span class="line"><span class="comment">//伤害执行前的Task</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> AttackCommand <span class="title">BeforeDamage</span>(<span class="params">Func&lt;Task&gt; beforeDamage</span>)</span>{...}</span><br><span class="line"></span><br><span class="line"><span class="comment">//通常会用到 AttackCommand.CreateContextAsync</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">async</span> Task&lt;AttackContext&gt; <span class="title">CreateContextAsync</span>(<span class="params">CombatState combatState, CardModel cardSource</span>)</span>{...}</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+
+<h3><span id="%E6%89%A7%E8%A1%8C">执行</span></h3><p>在执行前，可以任意搭配属性/时机方法，执行必须放在最后一位</p>
+<figure class="highlight c#"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//执行伤害</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">async</span> Task&lt;AttackCommand&gt; <span class="title">Execute</span>(<span class="params">PlayerChoiceContext? choiceContext</span>)</span>{...}</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+
+<p>以旋风斩为例（多段对群）</p>
+<figure class="highlight c#"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">await</span> DamageCmd.Attack(DynamicVars.Damage.BaseValue)</span><br><span class="line">            .WithHitCount(num) <span class="comment">//攻击次数</span></span><br><span class="line">            .FromCard(<span class="keyword">this</span>) </span><br><span class="line">			.TargetingAllOpponents(CombatState)</span><br><span class="line">			.WithHitFx(<span class="string">"vfx/vfx_giant_horizontal_slash"</span>) <span class="comment">//命中特效</span></span><br><span class="line">			.Execute(choiceContext);</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+
+<h3><span id="%E7%89%B9%E6%AE%8A-%E7%9B%B4%E6%8E%A5%E4%BC%A4%E5%AE%B3">特殊-直接伤害</span></h3><p>不使用DamageCmd，而是直接调用生物的Damage方法：<br>以锁镰为例（随机对单，不受Power影响）</p>
+<figure class="highlight c#"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//取随机可攻击到的敌人</span></span><br><span class="line">Creature creature = Owner.RunState.Rng.CombatTargets.NextItem(Owner.Creature.CombatState.HittableEnemies);</span><br><span class="line"><span class="keyword">if</span> (creature != <span class="literal">null</span>)</span><br><span class="line">{</span><br><span class="line">    <span class="comment">//这个是遗物状态更新，请参考遗物篇</span></span><br><span class="line">    TaskHelper.RunSafely(DoActivateVisuals());</span><br><span class="line">    <span class="keyword">await</span> CreatureCmd.Damage(context, creature, DynamicVars.Damage, Owner.Creature);</span><br><span class="line">}</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+
+<hr>
+<h2><span id="%E5%8D%A1%E7%89%8C%E7%B1%BB">卡牌类</span></h2><h3><span id="%E7%89%8C%E5%A0%86%E6%93%8D%E4%BD%9Ccardpilecmd">牌堆操作（CardPileCmd）</span></h3><p>牌组类型（PileType）有这几种：</p>
+<ul>
+<li>Hand（手牌）</li>
+<li>Deck（牌组）</li>
+<li>Draw（抽牌堆）</li>
+<li>Exhaust（消耗堆）</li>
+<li>Discard（弃牌堆）</li>
+<li>Play（执行堆）</li>
+</ul>
+<h4><span id="%E6%8A%BD%E7%89%8C">抽牌</span></h4><figure class="highlight c#"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//抽牌，DynamicVars.Cards请参考数值篇</span></span><br><span class="line"><span class="keyword">await</span> CardPileCmd.Draw(choiceContext, DynamicVars.Cards.BaseValue, Owner);</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+
+<h4><span id="%E8%8E%B7%E5%BE%97%E7%89%8C%E5%A0%86%E5%8F%8A%E5%85%B6%E6%89%80%E6%9C%89%E5%8D%A1%E7%89%8C">获得牌堆及其所有卡牌</span></h4><figure class="highlight c#"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//获得手牌（其他牌堆同理，参考上文的PileType修改即可）</span></span><br><span class="line">IEnumerable&lt;CardModel&gt; cards = PileType.Hand.GetPile(Owner).Cards;</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+
+<h4><span id="%E5%85%B6%E4%BB%96">其他</span></h4><p>自行查看CardPileCmd即可，这一部分和塔一比较类似</p>
+<hr>
+<h3><span id="%E5%8D%A1%E7%89%8C%E9%80%89%E6%8B%A9cardselectcmd">卡牌选择（CardSelectCmd）</span></h3><h4><span id="%E9%80%89%E6%8B%A9%E5%8F%82%E6%95%B0">选择参数</span></h4><p>选择参数（CardSelectorPrefs）：它的构造函数需要传入提示&amp;限制</p>
+<ul>
+<li>提示：（有以下几种内置，也可以自定义）<ul>
+<li>TransformSelectionPrompt</li>
+<li>ExhaustSelectionPrompt</li>
+<li>RemoveSelectionPrompt</li>
+<li>EnchantSelectionPrompt</li>
+<li>DiscardSelectionPrompt</li>
+<li>UpgradeSelectionPrompt</li>
+</ul>
+</li>
+<li>限制：（倾斜部分不可定义）<ul>
+<li>MinSelect 最小选牌数</li>
+<li>MaxSelect 最大选牌数</li>
+<li><em>RequireManualConfirmation 是否需要手动确认选择</em></li>
+<li><em>Cancelable 是否可取消选择</em></li>
+<li><em>UnpoweredPreviews 预览时是否置为未数值修正状态</em></li>
+<li><em>PretendCardsCanBePlayed 是否假定选中的卡牌可以被打出</em></li>
+<li>ShouldGlowGold 是否高亮（因为是Func类型，可以为每张卡牌单独定义）</li>
+</ul>
+</li>
+</ul>
+<h4><span id="%E8%8C%83%E5%9B%B4%E5%AE%9A%E4%B9%89">范围定义</span></h4><p>定义选择范围，形如：CardSelectCmd.FromHand</p>
+<figure class="highlight c#"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//自定义卡牌列表（单行，例如飞溅）</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">async</span> Task&lt;CardModel?&gt; FromChooseACardScreen</span><br><span class="line">(PlayerChoiceContext context, IReadOnlyList&lt;CardModel&gt; cards, Player player, <span class="built_in">bool</span> canSkip = <span class="literal">false</span>){...}</span><br><span class="line"></span><br><span class="line"><span class="comment">//自定义卡牌列表（多行）</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">async</span> Task&lt;IEnumerable&lt;CardModel&gt;&gt; FromSimpleGrid</span><br><span class="line">(PlayerChoiceContext context, IReadOnlyList&lt;CardModel&gt; cardsIn, Player player, CardSelectorPrefs prefs){...}</span><br><span class="line"></span><br><span class="line"><span class="comment">//从牌组选择（会预览升级效果）</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">async</span> Task&lt;IEnumerable&lt;CardModel&gt;&gt; FromDeckForUpgrade</span><br><span class="line">(Player player, CardSelectorPrefs prefs){...}</span><br><span class="line"></span><br><span class="line"><span class="comment">//从牌组选择（会预览附魔效果）它还有两个多态，有需要的可以自行查看CardSelectCmd</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">async</span> Task&lt;IEnumerable&lt;CardModel&gt;&gt; FromDeckForEnchantment</span><br><span class="line">(Player player, EnchantmentModel enchantment, <span class="built_in">int</span> amount, CardSelectorPrefs prefs){...}</span><br><span class="line"></span><br><span class="line"><span class="comment">//从手牌选择</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">async</span> Task&lt;IEnumerable&lt;CardModel&gt;&gt; FromHand</span><br><span class="line">(PlayerChoiceContext context, Player player, CardSelectorPrefs prefs, Func&lt;CardModel, <span class="built_in">bool</span>&gt;? filter, AbstractModel source){...}</span><br><span class="line"></span><br><span class="line"><span class="comment">//其中有个FromHandForDiscard，区别于上面的FromHand，它会自动高亮具有Sly效果的卡牌</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//从手牌选择（会预览升级效果）</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">async</span> Task&lt;CardModel?&gt; FromHandForUpgrade</span><br><span class="line">(PlayerChoiceContext context, Player player, AbstractModel source){...}</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+
+<h4><span id="%E5%A4%9A%E7%BB%93%E6%9E%9C%E5%A4%84%E7%90%86ienumerable">多结果处理（IEnumerable&lt;CardModel&gt;）</span></h4><p>注意到范围定义中有的方法返回的是IEnumerable&lt;CardModel&gt;，而不是CardModel。这是为了支持多选。</p>
+<p>给出几个常见的用法：（如果需要更多请自查IEnumerable&lt;&gt;的方法）</p>
+<ul>
+<li><strong>取出第一张</strong>：FirstOrDefault() -&gt; 返回第一张选中的卡牌，如果为空则返回null</li>
+<li><strong>取出最后一张</strong>：LastOrDefault() -&gt; 返回最后一张选中的卡牌，如果为空则返回null</li>
+<li><strong>取出所有</strong>：ToList() -&gt; 返回一个List&lt;CardModel&gt;，包含所有选中的卡牌</li>
+</ul>
+<hr>
+<h3><span id="%E5%8D%A1%E7%89%8C%E5%A4%84%E7%90%86">卡牌处理</span></h3><p>在这里默认你已经得到了一张卡牌，现在是对它的处理部分，命令类为CardCmd<br><strong>注意，这一部分含有大量示例</strong></p>
+<h4><span id="%E8%87%AA%E5%8A%A8%E6%89%93%E5%87%BAautoplay">自动打出（AutoPlay）</span></h4><figure class="highlight c#"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//CardCmd.AutoPlay</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">async</span> Task <span class="title">AutoPlay</span>(<span class="params"></span></span></span><br><span class="line"><span class="params"><span class="function">    PlayerChoiceContext choiceContext,</span></span></span><br><span class="line"><span class="params"><span class="function">    CardModel card, </span></span></span><br><span class="line"><span class="params"><span class="function">    Creature? target, </span></span></span><br><span class="line"><span class="params"><span class="function">    AutoPlayType type = AutoPlayType.Default, </span></span></span><br><span class="line"><span class="params"><span class="function">    <span class="built_in">bool</span> skipXCapture = <span class="literal">false</span>, </span></span></span><br><span class="line"><span class="params"><span class="function">    <span class="built_in">bool</span> skipCardPileVisuals = <span class="literal">false</span></span>)</span>{...}</span><br><span class="line"></span><br><span class="line"><span class="comment">//示例-抉择，抉择</span></span><br><span class="line"><span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; DynamicVars.Repeat.IntValue; i++)</span><br><span class="line">{</span><br><span class="line">    <span class="comment">//target为null时自动选择随机敌人作为目标</span></span><br><span class="line">    <span class="keyword">await</span> CardCmd.AutoPlay(choiceContext, card, <span class="literal">null</span>);</span><br><span class="line">}</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+
+<h4><span id="%E5%BC%83%E7%89%8Cdiscarddiscardanddraw">弃牌（Discard/DiscardAndDraw）</span></h4><figure class="highlight c#"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//CardCmd.DiscardAndDraw 其中Discard的两个多态方法均为调用本方法</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">async</span> Task <span class="title">DiscardAndDraw</span>(<span class="params"></span></span></span><br><span class="line"><span class="params"><span class="function">    PlayerChoiceContext choiceContext, </span></span></span><br><span class="line"><span class="params"><span class="function">    IEnumerable&lt;CardModel&gt; cardsToDiscard, </span></span></span><br><span class="line"><span class="params"><span class="function">    <span class="built_in">int</span> cardsToDraw</span>)</span>{...}</span><br><span class="line"></span><br><span class="line"><span class="comment">//示例-计算下注</span></span><br><span class="line">IEnumerable&lt;CardModel&gt; cards = PileType.Hand.GetPile(Owner).Cards;</span><br><span class="line"><span class="built_in">int</span> cardsToDraw = cards.Count();</span><br><span class="line"><span class="keyword">await</span> CardCmd.DiscardAndDraw(choiceContext, cards, cardsToDraw);</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+
+<h4><span id="%E6%B6%88%E8%80%97exhaust">消耗（Exhaust）</span></h4><figure class="highlight c#"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//CardCmd.Exhaust</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">async</span> Task <span class="title">Exhaust</span>(<span class="params"></span></span></span><br><span class="line"><span class="params"><span class="function">    PlayerChoiceContext choiceContext, </span></span></span><br><span class="line"><span class="params"><span class="function">    CardModel card, </span></span></span><br><span class="line"><span class="params"><span class="function">    <span class="built_in">bool</span> causedByEthereal = <span class="literal">false</span>, </span></span></span><br><span class="line"><span class="params"><span class="function">    <span class="built_in">bool</span> skipVisuals = <span class="literal">false</span></span>)</span>{...}</span><br><span class="line"></span><br><span class="line"><span class="comment">//示例-坚毅</span></span><br><span class="line">CardPile pile = PileType.Hand.GetPile(Owner);</span><br><span class="line">CardModel cardModel2 = Owner.RunState.Rng.CombatCardSelection.NextItem(pile.Cards);</span><br><span class="line"><span class="keyword">if</span> (cardModel2 != <span class="literal">null</span>)</span><br><span class="line">{</span><br><span class="line">    <span class="keyword">await</span> CardCmd.Exhaust(choiceContext, cardModel2);</span><br><span class="line">}</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+
+<h4><span id="%E5%8D%87%E7%BA%A7%E9%99%8D%E7%BA%A7upgradedowngrade">升级/降级（Upgrade/Downgrade）</span></h4><figure class="highlight c#"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//CardCmd.Upgrade 须搭配ForUpgrade的范围定义方法</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Upgrade</span>(<span class="params"></span></span></span><br><span class="line"><span class="params"><span class="function">    IEnumerable&lt;CardModel&gt; cards, </span></span></span><br><span class="line"><span class="params"><span class="function">    CardPreviewStyle style</span>)</span>{...}</span><br><span class="line"></span><br><span class="line"><span class="comment">//CardCmd.Downgrade 降级的本质是复制一张未升级的牌，将它的数值/描述等属性赋值给当前牌</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Downgrade</span>(<span class="params">CardModel card</span>)</span>{...}</span><br><span class="line"></span><br><span class="line"><span class="comment">//示例-武装</span></span><br><span class="line">CardModel cardModel = <span class="keyword">await</span> CardSelectCmd.FromHandForUpgrade(choiceContext, <span class="keyword">base</span>.Owner, <span class="keyword">this</span>);</span><br><span class="line"><span class="keyword">if</span> (cardModel != <span class="literal">null</span>)</span><br><span class="line">{</span><br><span class="line">    CardCmd.Upgrade(cardModel);</span><br><span class="line">}</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+
+<h4><span id="%E5%8F%98%E5%8C%96transform">变化（Transform）</span></h4><figure class="highlight c#"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//CardCmd.Transform 另有TranformToRandom/TransformTo&lt;T&gt;/Transform调用本方法，可自行查看</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">async</span> Task&lt;IEnumerable&lt;CardPileAddResult&gt;&gt; Transform(</span><br><span class="line">    IEnumerable&lt;CardTransformation&gt; transformations, </span><br><span class="line">    Rng? rng, </span><br><span class="line">    CardPreviewStyle style = CardPreviewStyle.HorizontalLayout){...}</span><br><span class="line"></span><br><span class="line"><span class="comment">//示例-降灵（这不是我们SQL吗）</span></span><br><span class="line">List&lt;CardModel&gt; cardsIn = (</span><br><span class="line">    <span class="keyword">from</span> c <span class="keyword">in</span> PileType.Draw.GetPile(<span class="keyword">base</span>.Owner).Cards</span><br><span class="line">    <span class="keyword">orderby</span> c.Rarity, c.Id</span><br><span class="line">    <span class="keyword">select</span> c).ToList();</span><br><span class="line">List&lt;CardModel&gt; list = (<span class="keyword">await</span> CardSelectCmd.FromSimpleGrid(choiceContext, cardsIn, <span class="keyword">base</span>.Owner, <span class="keyword">new</span> CardSelectorPrefs(CardSelectorPrefs.TransformSelectionPrompt, <span class="keyword">base</span>.DynamicVars.Cards.IntValue))).ToList();</span><br><span class="line"><span class="keyword">foreach</span> (CardModel item <span class="keyword">in</span> list)</span><br><span class="line">{</span><br><span class="line">    <span class="comment">//重点是这里，CardCmd.Transform返回的是CardPileAddResult，而不是Void</span></span><br><span class="line">    CardPileAddResult? cardPileAddResult = <span class="keyword">await</span> CardCmd.TransformTo&lt;Soul&gt;(item);</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">base</span>.IsUpgraded &amp;&amp; cardPileAddResult.HasValue)</span><br><span class="line">    {</span><br><span class="line">        CardCmd.Upgrade(cardPileAddResult.Value.cardAdded);</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+
+<h4><span id="%E9%99%84%E9%AD%94enchant">附魔（Enchant）</span></h4><figure class="highlight c#"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//CardCmd.Enchant</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> EnchantmentModel? Enchant(</span><br><span class="line">    EnchantmentModel enchantment, </span><br><span class="line">    CardModel card, </span><br><span class="line">    <span class="built_in">decimal</span> amount){...}</span><br><span class="line"></span><br><span class="line"><span class="comment">//示例-放电异虾</span></span><br><span class="line">CardSelectorPrefs prefs = <span class="keyword">new</span> CardSelectorPrefs(CardSelectorPrefs.EnchantSelectionPrompt, <span class="number">1</span>);</span><br><span class="line">Imbued canonicalMomentum = ModelDb.Enchantment&lt;Imbued&gt;();</span><br><span class="line"><span class="keyword">foreach</span> (CardModel item <span class="keyword">in</span> <span class="keyword">await</span> CardSelectCmd.FromDeckForEnchantment.Owner, canonicalMomentum, <span class="number">1</span>, prefs))</span><br><span class="line">{</span><br><span class="line">    <span class="comment">//ToMutable()用于复制canonicalMomentum，避免修改原始对象</span></span><br><span class="line">    CardCmd.Enchant(canonicalMomentum.ToMutable(), item, <span class="number">1</span>m);</span><br><span class="line">    CardCmd.Preview(item);</span><br><span class="line">}</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+
+<p>写到这里只介绍了一半的常见卡牌处理方法，还有半部分需要你在使用过程中自己探索了（</p>
+<hr>
+</body></html>
+	</article>
+
+	 
+ 
+</div>
+				</div>
+			</div>
+			<div class="kira-right-column">
+	<a onclick="document.querySelector('#kira-top-header').scrollIntoView({behavior: 'smooth'});" class="kira-backtotop" aria-label="回到顶部" title="回到顶部">
+		<button class="mdui-fab mdui-ripple">
+			<i class="kirafont icon-caret-up"></i>
+		</button>
+	</a>
+</div>
+
+		</div>
+	</body>
+</html>
