@@ -414,7 +414,7 @@ public static EnchantmentModel? Enchant(
 //示例-放电异虾
 CardSelectorPrefs prefs = new CardSelectorPrefs(CardSelectorPrefs.EnchantSelectionPrompt, 1);
 Imbued canonicalMomentum = ModelDb.Enchantment<Imbued>();
-foreach (CardModel item in await CardSelectCmd.FromDeckForEnchantment.Owner, canonicalMomentum, 1, prefs))
+foreach (CardModel item in await CardSelectCmd.FromDeckForEnchantment(Owner, canonicalMomentum, 1, prefs))
 {
     //ToMutable()用于复制canonicalMomentum，避免修改原始对象
     CardCmd.Enchant(canonicalMomentum.ToMutable(), item, 1m);
@@ -424,6 +424,63 @@ foreach (CardModel item in await CardSelectCmd.FromDeckForEnchantment.Owner, can
 ```
 
 写到这里只介绍了一半的常见卡牌处理方法，还有半部分需要你在使用过程中自己探索了（
+
+---
+
+**作业**（这个习惯来自于塔一著名的Patch教程）：
+<div class="kira-note kira-note-tip">
+  <span class="kira-note-title">请实现：</span>
+  <div class="kira-note-content">
+    选择弃牌堆的1张牌，将它变化为同稀有度的随机能力牌后洗入抽牌堆。
+    <br><b>Tip1：你的检索列表应该只包含UNCOMMON/RARE的稀有度（因为没有COMMON的能力牌）</b>
+    <br><b>Tip2：你可以参考降灵/飞溅/头槌</b>
+  </div>
+</div>
+
+<details>
+<summary>[查看答案]</summary>
+
+``` C#
+//确定范围
+List<CardModel> cardsIn = (
+    from c in PileType.Discard.GetPile(Owner).Cards
+    orderby c.Rarity, c.Id
+    select c
+)
+.Where(c => c.Rarity == CardRarity.Uncommon || c.Rarity == CardRarity.Rare)
+.ToList();
+
+//选择卡牌
+List<CardModel> list = (await CardSelectCmd.FromSimpleGrid(
+    choiceContext,
+    cardsIn,
+    Owner,
+    new CardSelectorPrefs(CardSelectorPrefs.TransformSelectionPrompt,DynamicVars.Cards.IntValue)
+)).ToList();
+
+//如果不借助Lib或Helper而直接获取对象卡牌
+foreach(CardModel model in list)
+{
+    IEnumerable<CardPoolModel> pools = Owner.UnlockState.CharacterCardPools.Where(pool => pool.AllCardIds.Contains(model.Id));
+    if (pools.Any())
+    {
+        CardRarity rarity = model.Rarity;
+        IEnumerable<CardModel> powerCards = pools.First().AllCards.Where(c => c.Type == CardType.Power && c.Rarity == rarity);
+        if (powerCards.Any())
+        {
+            CardModel transformTo = Owner.RunState.Rng.CombatCardGeneration.NextItem(powerCards);
+            CardPileAddResult? cardPileAddResult = await CardCmd.Transform(model,transformTo,CardPreviewStyle.HorizontalLayout);
+            if (cardPileAddResult.HasValue)
+            {
+                await CardPileCmd.Add(cardPileAddResult.Value.cardAdded, PileType.Draw, CardPilePosition.Random);
+            }
+        }
+    }
+}
+
+```
+
+</details>
 
 ---
 

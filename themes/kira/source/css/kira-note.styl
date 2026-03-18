@@ -1,0 +1,152 @@
+.kira-note {
+  margin: 20px 0;
+  padding: 15px 20px;
+  border-radius: 8px;
+  position: relative;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    border-radius: 8px 0 0 8px;
+  }
+  
+  p {
+    margin: 0;
+    
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+  
+  code {
+    background-color: rgba(0, 0, 0, 0.05);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.9em;
+  }
+  
+  pre {
+    margin: 10px 0 0 0;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 6px;
+    padding: 12px;
+    overflow-x: auto;
+    
+    code {
+      background-color: transparent;
+      padding: 0;
+    }
+  }
+  
+  &.kira-note-info {
+    background-color: #e8f4fd;
+    
+    &::before {
+      background-color: #3498db;
+    }
+    
+    .kira-note-title {
+      color: #2980b9;
+      
+      &::before {
+        content: 'ℹ️ ';
+      }
+    }
+  }
+  
+  &.kira-note-tip {
+    background-color: #e8f8f5;
+    
+    &::before {
+      background-color: #1abc9c;
+    }
+    
+    .kira-note-title {
+      color: #16a085;
+      
+      &::before {
+        content: '💡 ';
+      }
+    }
+  }
+  
+  &.kira-note-success {
+    background-color: #eafaf1;
+    
+    &::before {
+      background-color: #27ae60;
+    }
+    
+    .kira-note-title {
+      color: #229954;
+      
+      &::before {
+        content: '✅ ';
+      }
+    }
+  }
+  
+  &.kira-note-warning {
+    background-color: #fef9e7;
+    
+    &::before {
+      background-color: #f39c12;
+    }
+    
+    .kira-note-title {
+      color: #d68910;
+      
+      &::before {
+        content: '⚠️ ';
+      }
+    }
+  }
+  
+  &.kira-note-danger {
+    background-color: #fdedec;
+    
+    &::before {
+      background-color: #e74c3c;
+    }
+    
+    .kira-note-title {
+      color: #c0392b;
+      
+      &::before {
+        content: '❌ ';
+      }
+    }
+  }
+  
+  &.kira-note-quote {
+    background-color: #f4f5f7;
+    
+    &::before {
+      background-color: #95a5a6;
+    }
+    
+    .kira-note-title {
+      color: #7f8c8d;
+      
+      &::before {
+        content: '💬 ';
+      }
+    }
+  }
+  
+  .kira-note-title {
+    font-weight: 600;
+    font-size: 1em;
+    margin-bottom: 8px;
+    display: block;
+  }
+  
+  .kira-note-content {
+    color: #444;
+    line-height: 1.6;
+  }
+}
