@@ -567,6 +567,126 @@ details div.kira-aplayer-container div[id^='aplayer-'] div.aplayer-body div.apla
 details div.kira-aplayer-container div[id^='aplayer-'] div.aplayer-body div.aplayer-info div.aplayer-controller > div.aplayer-bar-wrap > div.aplayer-bar > div.aplayer-played span.aplayer-thumb {
   background: #3498db !important;
 }
+.kira-note {
+  margin: 20px 0;
+  padding: 15px 20px;
+  border-radius: 8px;
+  position: relative;
+}
+.kira-note::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  border-radius: 8px 0 0 8px;
+}
+.kira-note p {
+  margin: 0;
+}
+.kira-note p:not(:last-child) {
+  margin-bottom: 10px;
+}
+.kira-note code {
+  background-color: rgba(0,0,0,0.05);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+.kira-note pre {
+  margin: 10px 0 0 0;
+  background-color: rgba(0,0,0,0.05);
+  border-radius: 6px;
+  padding: 12px;
+  overflow-x: auto;
+}
+.kira-note pre code {
+  background-color: transparent;
+  padding: 0;
+}
+.kira-note.kira-note-info {
+  background-color: #e8f4fd;
+}
+.kira-note.kira-note-info::before {
+  background-color: #3498db;
+}
+.kira-note.kira-note-info .kira-note-title {
+  color: #2980b9;
+}
+.kira-note.kira-note-info .kira-note-title::before {
+  content: 'ℹ️ ';
+}
+.kira-note.kira-note-tip {
+  background-color: #e8f8f5;
+}
+.kira-note.kira-note-tip::before {
+  background-color: #1abc9c;
+}
+.kira-note.kira-note-tip .kira-note-title {
+  color: #16a085;
+}
+.kira-note.kira-note-tip .kira-note-title::before {
+  content: '💡 ';
+}
+.kira-note.kira-note-success {
+  background-color: #eafaf1;
+}
+.kira-note.kira-note-success::before {
+  background-color: #27ae60;
+}
+.kira-note.kira-note-success .kira-note-title {
+  color: #229954;
+}
+.kira-note.kira-note-success .kira-note-title::before {
+  content: '✅ ';
+}
+.kira-note.kira-note-warning {
+  background-color: #fef9e7;
+}
+.kira-note.kira-note-warning::before {
+  background-color: #f39c12;
+}
+.kira-note.kira-note-warning .kira-note-title {
+  color: #d68910;
+}
+.kira-note.kira-note-warning .kira-note-title::before {
+  content: '⚠️ ';
+}
+.kira-note.kira-note-danger {
+  background-color: #fdedec;
+}
+.kira-note.kira-note-danger::before {
+  background-color: #e74c3c;
+}
+.kira-note.kira-note-danger .kira-note-title {
+  color: #c0392b;
+}
+.kira-note.kira-note-danger .kira-note-title::before {
+  content: '❌ ';
+}
+.kira-note.kira-note-quote {
+  background-color: #f4f5f7;
+}
+.kira-note.kira-note-quote::before {
+  background-color: #95a5a6;
+}
+.kira-note.kira-note-quote .kira-note-title {
+  color: #7f8c8d;
+}
+.kira-note.kira-note-quote .kira-note-title::before {
+  content: '💬 ';
+}
+.kira-note .kira-note-title {
+  font-weight: 600;
+  font-size: 1em;
+  margin-bottom: 8px;
+  display: block;
+}
+.kira-note .kira-note-content {
+  color: #444;
+  line-height: 1.6;
+}
 .kira-sidebar {
   scrollbar-width: none;
   max-width: 240px;
