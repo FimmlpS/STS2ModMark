@@ -21,7 +21,7 @@ cover: /images/main/self_help_book.png
 
 ---
 
-[**卡牌部分**](../cards)：聚焦于实现一张卡牌的效果的各种细节，包括但不限于：
+[**卡牌部分**](https://fimmlps.github.io/STS2ModMark/cards/)：聚焦于实现一张卡牌的效果的各种细节，包括但不限于：
 - 卡牌的属性（伤害、消耗、目标等）
 - 卡牌的触发时机（打出前/后、回合开始/结束等）
 - 卡牌的效果实现（对敌人造成伤害、增加能量、抽牌等）
@@ -29,10 +29,14 @@ cover: /images/main/self_help_book.png
 
 ---
 
-[**遗物部分**](*/relics)： todo
+[**遗物部分**](https://fimmlps.github.io/STS2ModMark/relics/)： todo
 
 ---
 
-[**特效部分**](*/effects)： todo
+[**时机部分**](https://fimmlps.github.io/STS2ModMark/triggers/)： todo
+
+---
+
+[**行为部分**](https://fimmlps.github.io/STS2ModMark/actions/)： todo
 
 ---

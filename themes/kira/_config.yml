@@ -8,8 +8,10 @@ menu:
     - /cards/
   遗物: 
     - /relics/
-  特效: 
-    - /effects/
+  时机: 
+    - /triggers/
+  行为: 
+    - /actions/
 
 # Code Block
 copyableCodeblock: true

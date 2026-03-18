@@ -2,10 +2,8 @@
 title: 遗物
 type: page
 layout: default
-cover: /images/background.jpg
+cover: /images/relic/relic_trader.png
 ---
-
-# 遗物
 
 ## 自定义遗物
 
