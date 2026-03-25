@@ -9,6 +9,8 @@ figure.highlight {
 figure.highlight pre,
 figure.highlight code {
   font-family: 'JetBrains Mono', 'Fira Code', 'Source Code Pro', 'Microsoft YaHei', 'PingFang SC', Consolas, Monaco, 'Courier New', monospace;
+  font-size: 13px;
+  line-height: 1.6;
 }
 
 figure.highlight .code pre {
@@ -78,7 +80,8 @@ figure.highlight .line {
 
 .built_in,
 .class .title,
-.title.class_ {
+.title.class_,
+.function {
   color: #e6c07b !important;
 }
 

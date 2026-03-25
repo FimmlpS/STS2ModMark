@@ -57,7 +57,9 @@ public class Strike : AbstractChunCard
 }
 ```
 
-### 常用技巧（抽象类）
+### 常用技巧
+
+#### 抽象类
 
 为你的卡牌添加一个通用的抽象类可以节省很多重复的代码量
 
@@ -82,6 +84,25 @@ public abstract class AbstractChunCard : CustomCardModel
     }
 }
 ```
+
+#### VSCode编辑
+
+VSCode的Explorer默认浏览所有文件，但是在godot中会自动为每一个读入的文件生成一个.uid文件，这就使得Explorer非常繁杂。
+![处理前](/source/images/card/VSBefore.png)
+
+你可以打开设置（Settings）在上方搜索框输入 <b>files:exclude</b> ，找到图示，<b>选中上方的Workspace</b>，然后添加 <b>**/*.uid</b> 到排除列表中。
+
+![处理](/source/images/card/VSIn.png)
+
+然后就可以忽略掉这些uid文件，更便捷地开发了（可以直接让你的Explorer缩短一半）。
+
+![处理后](/source/images/card/VSAfter.png)
+
+
+
+#### 卡图命名规则（BaseLib）
+
+
 
 ### 卡图命名规则（BaseLib）
 
