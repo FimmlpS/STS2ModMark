@@ -15,7 +15,7 @@
 <link rel="stylesheet" href="/STS2ModMark/css/layout.css">
 
 		
-		<title> 序言 -  STS2ModMark</title>
+		<title> 内联高亮使用说明 -  STS2ModMark</title>
 		<!-- <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" /> -->
 		<!-- <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script> -->
 		
@@ -84,8 +84,8 @@
 	</a>
 	</div>
 	<div class="kira-count">
-		<div><span>文章</span>1</div>
-		<div><span>标签</span>0</div>
+		<div><span>文章</span>2</div>
+		<div><span>标签</span>3</div>
 		<div><span>分类</span>0</div>
 	</div>
 	<div class="kira-list">
@@ -176,6 +176,13 @@
 			
 		
 			
+	<div class="kira-widget-wrap">
+		<div id="randomtagcloud" class="kira-widget tagcloud kira-rainbow">
+			<a href="/STS2ModMark/tags/Character/" style="font-size: 10px;">Character</a> <a href="/STS2ModMark/tags/%E6%9D%82%E8%B0%88/" style="font-size: 10px;">杂谈</a> <a href="/STS2ModMark/tags/%E8%AE%BE%E8%AE%A1/" style="font-size: 10px;">设计</a>
+		</div>
+		
+	</div>
+
 
 		
 			
@@ -184,7 +191,7 @@
 			文章归档
 		</h3>
 		<div class="kira-widget">
-			<ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/STS2ModMark/archives/2026/">2026</a><span class="archive-list-count">1</span></li></ul>
+			<ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/STS2ModMark/archives/2026/">2026</a><span class="archive-list-count">2</span></li></ul>
 		</div>
 	</div>
 
@@ -531,57 +538,104 @@
 <div class="kira-post">
 	<article>
 		
-		<div class="kira-post-cover">
+		<div
+			class="kira-post-cover"
+			style="padding-bottom: '56.25%'"
+		>
 			<img
-				data-src="/STS2ModMark/images/main/self_help_book.png"
+				data-src="/STS2ModMark/images/background.jpg"
 				data-sizes="auto"
-				alt="序言"
+				alt="内联高亮使用说明"
 				class="lazyload kira-post-cover-image disabled-kira-image"
 			/>
-			<h1>序言</h1>
+			<h1>内联高亮使用说明</h1>
 		</div>
 		
 		<div class="kira-post-meta kira-rainbow" style="margin:10px 0!important;">
-			<a><i class="kirafont icon-calendar-fill"></i>2026年03月25日</a>
-			<a><i class="kirafont icon-edit-fill"></i>335 字</a>
-			<a><i class="kirafont icon-time-circle-fill"></i>大概 1 分钟</a>
+			<a><i class="kirafont icon-calendar-fill"></i>2026年05月02日</a>
+			<a><i class="kirafont icon-edit-fill"></i>578 字</a>
+			<a><i class="kirafont icon-time-circle-fill"></i>大概 2 分钟</a>
 		</div>
-		<html><head></head><body><p>你好。<br>欢迎你点开这个记录，它已经且将继续记录我在探索杀戮尖塔二的过程。<br>我在塔一制作过一个合集，你或许也玩过我制作的MOD，不过这都已成前言。<br>塔二是一个新的开始，让我们一起做些准备吧——</p>
-<h2><span id="%E5%89%8D%E7%BD%AE">前置</span></h2><h3><span id="%E5%9F%BA%E7%A1%80%E5%BC%80%E5%8F%91">基础开发</span></h3><p>我建议你打开<a target="_blank" rel="noopener" href="https://glitchedreme.github.io/SlayTheSpire2ModdingTutorials/index.html">这份教程</a>，这是由资深作者REME制作的教程，它会指导你如何配置开发环境，进行基础的MOD开发，以及如何base其他MOD/添加你制作的内容等。</p>
-<h3><span id="%E8%BF%99%E4%BB%BD%E8%AE%B0%E5%BD%95%E6%98%AF%E4%BB%80%E4%B9%88">这份记录是什么</span></h3><p>你可以看到左侧的卡牌/遗物等选项卡，相信你在初次了解尖塔二的MOD开发时一定会对大量模板化的代码感到困惑。我将记录我在开发过程中遇到的基础问题，以及解决它们的方法。</p>
+		<html><head></head><body><h1><span id="%E5%86%85%E8%81%94%E9%AB%98%E4%BA%AE%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E">内联高亮使用说明</span></h1><h2><span id="%E5%8A%9F%E8%83%BD%E4%BB%8B%E7%BB%8D">功能介绍</span></h2><p>本框架提供了内联高亮功能，用于在一行文本中凸显部分文字，效果为灰色背景+圆角边框。</p>
+<h2><span id="%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F">使用方式</span></h2><h3><span id="%E6%96%B9%E5%BC%8F%E4%B8%80%E4%BD%BF%E7%94%A8--%E6%A0%87%E7%AD%BE%E6%8E%A8%E8%8D%90">方式一：使用 <code>&lt;mark&gt;</code> 标签（推荐）</span></h3><p>Markdown中可以直接使用HTML标签，就像使用 <code>&lt;b&gt;</code> 或 <code>&lt;strong&gt;</code> 一样。</p>
+<p><strong>用法：</strong></p>
+<figure class="highlight markdown"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">这是一段<span class="language-xml"><span class="tag">&lt;<span class="name">mark</span>&gt;</span></span>需要高亮的文本<span class="language-xml"><span class="tag">&lt;/<span class="name">mark</span>&gt;</span></span>，请注意看哦！</span><br></pre></td></tr></tbody></table></figure>
+
+<p><strong>效果：</strong><br>这是一段<mark>需要高亮的文本</mark>，请注意看哦！</p>
 <hr>
-<p><a href="https://fimmlps.github.io/STS2ModMark/cards/"><strong>卡牌部分</strong></a>：聚焦于实现一张卡牌的效果的各种细节，包括但不限于：</p>
+<h3><span id="%E6%96%B9%E5%BC%8F%E4%BA%8C%E4%BD%BF%E7%94%A8--%E6%A0%87%E7%AD%BE">方式二：使用 <code>&lt;span class="highlight-inline"&gt;</code> 标签</span></h3><p>如果你想要更灵活的控制，可以使用带有class的span标签。</p>
+<p><strong>用法：</strong></p>
+<figure class="highlight markdown"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">这是一段<span class="language-xml"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"highlight-inline"</span>&gt;</span></span>需要高亮的文本<span class="language-xml"><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span>，请注意看哦！</span><br></pre></td></tr></tbody></table></figure>
+
+<p><strong>效果：</strong><br>这是一段<span class="highlight-inline">需要高亮的文本</span>，请注意看哦！</p>
+<hr>
+<h2><span id="%E5%AE%8C%E6%95%B4%E7%A4%BA%E4%BE%8B">完整示例</span></h2><h3><span id="%E7%A4%BA%E4%BE%8B1%E5%9C%A8%E5%8F%A5%E5%AD%90%E4%B8%AD%E9%AB%98%E4%BA%AE%E5%85%B3%E9%94%AE%E8%AF%8D">示例1：在句子中高亮关键词</span></h3><figure class="highlight markdown"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">本MOD的核心机制是<span class="language-xml"><span class="tag">&lt;<span class="name">mark</span>&gt;</span></span>坍缩<span class="language-xml"><span class="tag">&lt;/<span class="name">mark</span>&gt;</span></span>，通过累积层数触发效果。</span><br></pre></td></tr></tbody></table></figure>
+
+<p>效果：本MOD的核心机制是<mark>坍缩</mark>，通过累积层数触发效果。</p>
+<hr>
+<h3><span id="%E7%A4%BA%E4%BE%8B2%E5%9C%A8%E5%88%97%E8%A1%A8%E4%B8%AD%E9%AB%98%E4%BA%AE">示例2：在列表中高亮</span></h3><figure class="highlight markdown"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">-</span> 卡牌名称：<span class="language-xml"><span class="tag">&lt;<span class="name">mark</span>&gt;</span></span>狩猎<span class="language-xml"><span class="tag">&lt;/<span class="name">mark</span>&gt;</span></span></span><br><span class="line"><span class="bullet">-</span> 效果：造成 <span class="language-xml"><span class="tag">&lt;<span class="name">mark</span>&gt;</span></span>6点<span class="language-xml"><span class="tag">&lt;/<span class="name">mark</span>&gt;</span></span> 伤害</span><br><span class="line"><span class="bullet">-</span> 强化：额外造成 <span class="language-xml"><span class="tag">&lt;<span class="name">mark</span>&gt;</span></span>1次<span class="language-xml"><span class="tag">&lt;/<span class="name">mark</span>&gt;</span></span> 伤害</span><br></pre></td></tr></tbody></table></figure>
+
+<p>效果：</p>
 <ul>
-<li>卡牌的属性（伤害、消耗、目标等）</li>
-<li>卡牌的触发时机（打出前/后、回合开始/结束等）</li>
-<li>卡牌的效果实现（对敌人造成伤害、增加能量、抽牌等）</li>
-<li>卡牌的特殊效果（如变化、附魔等）</li>
+<li>卡牌名称：<mark>狩猎</mark></li>
+<li>效果：造成 <mark>6点</mark> 伤害</li>
+<li>强化：额外造成 <mark>1次</mark> 伤害</li>
 </ul>
 <hr>
-<p><a href="https://fimmlps.github.io/STS2ModMark/relics/"><strong>遗物部分</strong></a>： todo</p>
+<h3><span id="%E7%A4%BA%E4%BE%8B3%E4%B8%8E%E4%BB%A3%E7%A0%81%E7%BB%93%E5%90%88%E4%BD%BF%E7%94%A8">示例3：与代码结合使用</span></h3><figure class="highlight markdown"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">在代码中，你可以使用<span class="language-xml"><span class="tag">&lt;<span class="name">mark</span>&gt;</span></span>CombatManager<span class="language-xml"><span class="tag">&lt;/<span class="name">mark</span>&gt;</span></span>来管理战斗流程，或者用<span class="language-xml"><span class="tag">&lt;<span class="name">mark</span>&gt;</span></span><span class="code">`card`</span><span class="language-xml"><span class="tag">&lt;/<span class="name">mark</span>&gt;</span></span>表示变量。</span><br></pre></td></tr></tbody></table></figure>
+
+<p>效果：在代码中，你可以使用<mark>CombatManager</mark>来管理战斗流程，或者用<mark><code>card</code></mark>表示变量。</p>
 <hr>
-<p><a href="https://fimmlps.github.io/STS2ModMark/triggers/"><strong>时机部分</strong></a>： todo</p>
+<h2><span id="%E6%A0%B7%E5%BC%8F%E8%AF%B4%E6%98%8E">样式说明</span></h2><ul>
+<li><strong>背景色</strong>：浅灰色 (<code>#e0e0e0</code>)</li>
+<li><strong>边框圆角</strong>：4px</li>
+<li><strong>内边距</strong>：2px 6px</li>
+<li><strong>文字颜色</strong>：深灰色 (<code>#333</code>)</li>
+<li><strong>文字粗细</strong>：正常</li>
+</ul>
 <hr>
-<p><a href="https://fimmlps.github.io/STS2ModMark/actions/"><strong>行为部分</strong></a>： todo</p>
+<h2><span id="%E5%AF%B9%E6%AF%94%E5%85%B6%E4%BB%96%E5%86%85%E8%81%94%E6%A0%B7%E5%BC%8F">对比其他内联样式</span></h2><table>
+<thead>
+<tr>
+<th>样式</th>
+<th>Markdown语法</th>
+<th>效果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>内联高亮</td>
+<td><code>&lt;mark&gt;文本&lt;/mark&gt;</code></td>
+<td><mark>文本</mark></td>
+</tr>
+<tr>
+<td>代码</td>
+<td><code>`文本`</code></td>
+<td><code>文本</code></td>
+</tr>
+<tr>
+<td>加粗</td>
+<td><code>**文本**</code></td>
+<td><strong>文本</strong></td>
+</tr>
+<tr>
+<td>斜体</td>
+<td><code>*文本*</code></td>
+<td><em>文本</em></td>
+</tr>
+</tbody></table>
 <hr>
+<h2><span id="%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9">注意事项</span></h2><ol>
+<li><code>&lt;mark&gt;</code> 是HTML标准标签，兼容性好</li>
+<li>该样式会自动应用到所有文章和页面中</li>
+<li>可以在代码中与其他样式混合使用</li>
+<li>如果需要调整颜色，可以在主题CSS文件中修改</li>
+</ol>
 </body></html>
 	</article>
 
 	 
-  
-	<div class="kira-post-meta kira-rainbow">
-		
-		
-	</div>
-	
-	<div class="kira-post-footer">
-		
-
-		
-	</div>
-	
+ 
 </div>
-
 				</div>
 			</div>
 			<div class="kira-right-column">
@@ -593,5 +647,8 @@
 </div>
 
 		</div>
+		
+<script src="/STS2ModMark/js/sts-card-parser.js"></script>
+
 	</body>
 </html>
