@@ -374,3 +374,53 @@ protected override IEnumerable<IHoverTip> ExtraHoverTips => [
 </div>
 
 ---
+
+## BaseLib拓展
+
+这里会用到一些BaseLib添加的卡牌相关接口，以方便你省去自定义一些Patch的步骤
+
+### 先古卡升级
+
+对应原版的痛击-破击，双重释放-四重释放这类；
+需要你在初始牌使用接口：<font color=Medium>ITranscendenceCard</font>
+
+``` C#
+//初始牌 Hunt
+[Pool(typeof(TyphonCardPool))]
+public class Hunt : AbstractTyphonCard, ITranscendenceCard //注意这个接口
+{
+    //稀有度为 Basic
+    public Hunt() : base(1, CardType.Attack, CardRarity.Basic, TargetType.AnyEnemy)
+    {
+        
+    }
+
+
+    public CardModel GetTranscendenceTransformedCard()
+    {
+        //返回先古版本
+        return ModelDb.Card<EternalHunt>();
+    }
+}
+
+```
+
+``` C#
+//先古牌 EternalHunt
+[Pool(typeof(TyphonCardPool))]
+public class EternalHunt : AbstractTyphonCard
+{
+    //稀有度为 Ancient
+    public EternalHunt() : base(2, CardType.Attack, CardRarity.Ancient, TargetType.AnyEnemy)
+    {
+        
+    }
+
+}
+
+```
+这样你就能在***欧洛巴斯***的选项先古牙齿中获取你初始牌的升级版了
+
+
+
+### 其他

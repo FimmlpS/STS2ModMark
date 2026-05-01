@@ -230,3 +230,14 @@ private async Task AfterAllPlayersReadyToEndTurn(Func<Task>? actionDuringEnemyTu
         <font color=Medium>Power-计划妥当</font>
 
 ---
+
+### 战斗开始
+
+涉及到房间的初始化，与塔一不同的是，固有处理（详见玩家回合开始）和抽牌堆的初始构成现在分开处理；
+涉及到的类有：
+- CombatRoom
+- CombatManager
+- Player
+  - Player.ResetCombatState （重置全部状态和牌堆）
+  - Player.PopulateCombatState （抽牌堆初始化）
+    <font color=MediumTurquoise>因此如果想实现战斗开始时让一些牌进入消耗/弃牌堆，可以Postfix的Patch这个函数</font>
